@@ -77,8 +77,7 @@ class Payment
         if ($response->responseCode == 0 && $response->data->transactionId) {
             
             echo "https://checkout.nasswallet.com/payment-gateway?id={$response->data->transactionId}&token={$response->data->token}&userIdentifier={$this->username}";
-                
-            //this is the final url format that the customer will be redirected to.
+           
         }else {
             return "something went wrong!";
         }

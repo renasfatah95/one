@@ -25,7 +25,7 @@ class Payment
     public function __construct()
     {
         $this->client = new Client([
-            'base_uri' => 'https://checkout.nasswallet.com/payment/transaction/',
+            'base_uri' => 'https://checkout.nasswallet.com/payment-gateway',
             'timeout' => '1000'
         ]);
     }

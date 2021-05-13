@@ -25,7 +25,7 @@ class Payment
     public function __construct()
     {
         $this->client = new Client([
-            'base_uri' => 'https://checkout.nasswallet.com/payment-gateway',
+            'base_uri' => 'https://uatgw1.nasswallet.com/payment/transaction/',
             'timeout' => '1000'
         ]);
     }
@@ -76,7 +76,7 @@ class Payment
 
         if ($response->responseCode == 0 && $response->data->transactionId) {
             
-            echo "https://checkout.nasswallet.com/payment-gateway?id={$response->data->transactionId}&token={$response->data->token}&userIdentifier={$this->username}";
+            echo "https://uatcheckout1.nasswallet.com/payment-gateway?id={$response->data->transactionId}&token={$response->data->token}&userIdentifier={$this->username}";
            
         }else {
             return "something went wrong!";

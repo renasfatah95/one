@@ -13,7 +13,7 @@ class Payment
     private $grantType = "password";
     private $transactionPin = "135758";   
     private $orderId = "263626";     
-    private $amount = "1000000";           
+    private $amount = "10";           
     private $languageCode = "en";
     private $client;
 
